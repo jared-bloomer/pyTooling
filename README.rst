@@ -40,7 +40,7 @@ it will run you through a series of prompts and provide you the correct metadata
   __license_url__ = "https://opensource.org/licenses/BSD-3-Clause"
   __version__ = "0.0.1"
   __maintainer__ = "Jared Bloomer"
-  __email__ = "jared@tuxknolwedge.com"
+  __email__ = "jared@tuxknowledge.com"
   __website__ = "http://www.jaredbloomer.com"
   __status__ = "Production"
   __deprecated__ = "False"
