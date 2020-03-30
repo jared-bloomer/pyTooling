@@ -1,6 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+__date__ = "2020-03-30"
+__author__ = "Jared Bloomer"
+__authors__ = "None"
+__copyright__ = "copyright 2020, Jared Bloomer. All rights reserved"
+__credits__ = ["None"]
+__contact__ = "Jared Bloomer"
+__license__ = "New BSD"
+__license_url__ = "https://opensource.org/licenses/BSD-3-Clause"
+__version__ = "0.0.1"
+__maintainer__ = "Jared Bloomer"
+__email__ = "jared@tuxknolwedge.com"
+__website__ = "http://www.jaredbloomer.com"
+__status__ = "Production"
+__deprecated__ = "False"
+
 """
 This script should be able to generate the following data
 
@@ -39,38 +54,32 @@ def getAuthors():
         Additional Authors
         Additional Credits
     """
-    Errors = ""
     try:
         pauthor = input("Who is the primary author of this script? (Required) ")
         if not pauthor:
             raise ValueError("Primary Author is required!")
     except ValueError as e:
-        Errors.append = "Exception: Could not get primary author. Error was {e}"
-        return Errors
+        return Exception(f"Failed to get Primary Author. Failure was {e}")
 
     try:
-        additional = input("Are there any additional authors of this script? [yes|no] ")
-        if additional == ('yes' or 'Yes' or 'y' or 'Y'):
+        additional = input("Are there any additional authors of this script? [yes|no] ").lower()
+        if additional == 'yes' or  additional == 'y':
             aauthors = input("Who are the additional authors? Please list all of them on one line. ")
         else:
             aauthors = "None"
     except ValueError as e:
-        Errors.append = "Exception: Could not get additional authors. Error was {e}"
+        return Exception(f"Failed to get additional authors. Failure was {e}")
 
     try:
-        acredits = input("Would you like to add additional credits? [yes|no] ")
-        if acredits == ('yes' or 'Yes' or 'y' or 'Y'):
+        acredits = input("Would you like to add additional credits? [yes|no] ").lower()
+        if acredits == 'yes' or  acredits == 'y':
             credits = input("Who are the additional credits? Please list all of them on one line. ")
         else:
             credits = "None"
     except ValueError as e:
-        Errors.append = "Exception: Could not get additional credits. Error was {e}"
+        return Exception(f"Failed to get additional credits. Failure was {e}")
 
-    if len(Errors) == 0:
-        print(Errors)
-        return Errors
-    else:
-        return (pauthor, aauthors, credits)
+    return (pauthor, aauthors, credits)
 
 def getContactInfo():
     """
