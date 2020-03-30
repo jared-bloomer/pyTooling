@@ -170,27 +170,27 @@ def getLicense():
             if not license_url:
                 raise ValueError("License URL is required!")
         elif option == "GPL v2":
-            license_url = "https://choosealicense.com/licenses/gpl-2.0/"
+            license_url = "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
         elif option == "GPL v3":
-            license_url = "https://choosealicense.com/licenses/gpl-3.0/"
+            license_url = "https://www.gnu.org/licenses/gpl-3.0.html"
         elif option == "MIT":
-            license_url = "https://choosealicense.com/licenses/mit/"
+            license_url = "https://mit-license.org/"
         elif option == "AGPL v3":
-            license_url = "https://choosealicense.com/licenses/agpl-3.0/"
+            license_url = "https://www.gnu.org/licenses/agpl-3.0.en.html"
         elif option == "Mozillia Public License 2.0":
-            license_url = "https://choosealicense.com/licenses/mpl-2.0/"
+            license_url = "https://www.mozilla.org/en-US/MPL/2.0/"
         elif option == "Apache License 2.0":
-            license_url = "https://choosealicense.com/licenses/apache-2.0/"
+            license_url = "https://www.apache.org/licenses/LICENSE-2.0.html"
         elif option == "Boost Software License 1.0":
-            license_url = "https://choosealicense.com/licenses/bsl-1.0/"
+            license_url = "https://www.boost.org/users/license.html"
         elif option == "The Unlicense":
-            license_url = "https://choosealicense.com/licenses/unlicense/"
+            license_url = "https://unlicense.org/"
         elif option == "New BSD":
             license_url = "https://opensource.org/licenses/BSD-3-Clause"
         elif option == "ISC":
-            license_url = "https://opensource.org/licenses/ISC"
+            license_url = "https://www.isc.org/licenses/"
         elif option == "LGPL v3":
-            license_url = "https://choosealicense.com/licenses/lgpl-3.0/"
+            license_url = "https://www.gnu.org/licenses/lgpl-3.0.en.html"
 
     except ValueError as e:
         return Exception(f"Failed to get License URL. Failure was {ValueError}")
