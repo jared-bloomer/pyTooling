@@ -20,15 +20,6 @@ __status__ = "Production/Development"
 __deprecated__ = "True/False"
 """
 
-"""
-TODO:
-
-    Get Status of project
-        Production or Development
-        Deprecated? 
-    Get Version Number
-    
-"""
 
 def getTodaysDate():
     """
@@ -62,8 +53,7 @@ def getAuthors():
         if additional == ('yes' or 'Yes' or 'y' or 'Y'):
             aauthors = input("Who are the additional authors? Please list all of them on one line. ")
         else:
-            aauthors = ""
-            pass
+            aauthors = "None"
     except ValueError as e:
         Errors.append = "Exception: Could not get additional authors. Error was {e}"
 
@@ -72,11 +62,12 @@ def getAuthors():
         if acredits == ('yes' or 'Yes' or 'y' or 'Y'):
             credits = input("Who are the additional credits? Please list all of them on one line. ")
         else:
-            credits = ""
+            credits = "None"
     except ValueError as e:
         Errors.append = "Exception: Could not get additional credits. Error was {e}"
 
     if len(Errors) == 0:
+        print(Errors)
         return Errors
     else:
         return (pauthor, aauthors, credits)
@@ -105,7 +96,7 @@ def getContactInfo():
     try:
         userWebsite = input("What is your Website? ")
         if not userWebsite:
-            userWebsite = ""
+            userWebsite = "None"
     except ValueError as e:
         return Exception(f"Failed to get Website. Failure was {e}")
 
@@ -214,22 +205,48 @@ def getStatus():
     try:
         version = input("what is the version of this code? ")
         if not version:
-            raise ValueError("Maintainer is required!")
+            raise ValueError("Version is required!")
     except ValueError as e:
-        return Exception(f"Failed to get Maintainer. Failure was {e}")
+        return Exception(f"Failed to get version. Failure was {e}")
 
-    return status, version
+    try:
+        deprecated = input("Is this project deprecated? [True|False]")
+        if deprecated == ('T' or 't' or 'true' or 'True'):
+            deprecated = "True"
+        else:
+            deprecated = "False"
+        if not deprecated:
+            raise ValueError("deprecated status is required!")
+    except ValueError as e:
+        return Exception(f"Failed to get deprecated status. Failure was {e}")
+
+    return status, version, deprecated
 
 def main():
     date = getTodaysDate()
     (pauthor, aauthor, credits) = getAuthors()
-    (userName, userEmail, userWebste) = getContactInfo()
+    (userName, userEmail, userWebsite) = getContactInfo()
     maintainer = getMaintainer()
     copy = getCopyright()
     (licenseType, licenseURL) = getLicense()
-    (status, version) = getStatus()
+    (status, version, deprecated) = getStatus()
+
+    print('__date__ = "%s"' % date)
+    print('__author__ = "%s"' % pauthor)
+    print('__authors__ = "%s"' % aauthor)
+    print('__copyright__ = "%s"' % copy )
+    print('__credits__ = ["%s"]' % credits )
+    print('__contact__ = "%s"' % userName )
+    print('__license__ = "%s"' % licenseType )
+    print('__license_url__ = "%s"' % licenseURL )
+    print('__version__ = "%s"' % version )
+    print('__maintainer__ = "%s"' % maintainer )
+    print('__email__ = "%s"' % userEmail )
+    print('__website__ = "%s"' % userWebsite )
+    print('__status__ = "%s"' % status )
+    print('__deprecated__ = "%s"' % deprecated )
 
 ##############
 # MAIN LOGIC #
 ##############
-#main()
+main()
