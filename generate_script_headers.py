@@ -59,7 +59,7 @@ def getAuthors():
 
     try:
         additional = input("Are there any additional authors of this script? [yes|no] ")
-        if additional == 'yes' or 'Yes' or 'y' or 'Y':
+        if additional == ('yes' or 'Yes' or 'y' or 'Y'):
             aauthors = input("Who are the additional authors? Please list all of them on one line. ")
         else:
             aauthors = ""
@@ -69,7 +69,7 @@ def getAuthors():
 
     try:
         acredits = input("Would you like to add additional credits? [yes|no] ")
-        if acredits == 'yes' or 'Yes' or 'y' or 'Y':
+        if acredits == ('yes' or 'Yes' or 'y' or 'Y'):
             credits = input("Who are the additional credits? Please list all of them on one line. ")
         else:
             credits = ""
@@ -81,4 +81,3 @@ def getAuthors():
     else:
         return (pauthor, aauthors, credits)
 
-print(getAuthors())
