@@ -10,7 +10,7 @@ __authors__ = "Additional Authors"
 __copyright__ = "Copyright 2007, Company or Organization Name"
 __credits__ = ["Usually the same as Authors but can call out other people"]
 __contact__ = "Contact Information"
-__license__ = "GPL2/GPL3/MIT/New BSD/ISC/LGPL"
+__license__ = "GPL2/GPL3/MIT/New BSD/ISC/LGPL/other"
 __license_url__ = "HTML Link to License"
 __version__ = "1.0.1"
 __maintainer__ = "firstName lastName"
@@ -23,7 +23,6 @@ __deprecated__ = "True/False"
 """
 TODO:
     
-    Get Copyright Info
     Get License Type
     Get License URL
     Get Status of project
@@ -141,6 +140,64 @@ def getCopyright():
         return Exception(f"Failed to get company or organization. Failure was {e}")
     return "copyright %s, %s. All rights reserved" % (year, org)
 
+def getLicense():
+    """
+    Find out what License this code is Licensed Under and generate URL to License. Options are
+
+    GPL v2
+    GPL v3
+    MIT
+    AGPL v3
+    Mozillia Public License 2.0
+    Apache License 2.0
+    Boost Software License 1.0
+    The Unlicense
+    New BSD
+    ISC
+    LGPL v3
+    Other
+    """
+    try:
+        from pick import pick
+        title = "Please choose which License you are using: "
+        options = ['GPL v2', 'GPL v3', 'MIT', 'AGPL v3', 'Mozillia Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense', 'New BSD', 'ISC', 'LGPL v3', 'Other']
+        option, index = pick(options, title)
+    except Exception as e:
+        return Exception(f"There was an Error. Failure was {e}")
+
+    try:
+        if option == "Other":
+            license_url = input("What is the URL to the Other License? ")
+            if not license_url:
+                raise ValueError("License URL is required!")
+        elif option == "GPL v2":
+            license_url = "https://choosealicense.com/licenses/gpl-2.0/"
+        elif option == "GPL v3":
+            license_url = "https://choosealicense.com/licenses/gpl-3.0/"
+        elif option == "MIT":
+            license_url = "https://choosealicense.com/licenses/mit/"
+        elif option == "AGPL v3":
+            license_url = "https://choosealicense.com/licenses/agpl-3.0/"
+        elif option == "Mozillia Public License 2.0":
+            license_url = "https://choosealicense.com/licenses/mpl-2.0/"
+        elif option == "Apache License 2.0":
+            license_url = "https://choosealicense.com/licenses/apache-2.0/"
+        elif option == "Boost Software License 1.0":
+            license_url = "https://choosealicense.com/licenses/bsl-1.0/"
+        elif option == "The Unlicense":
+            license_url = "https://choosealicense.com/licenses/unlicense/"
+        elif option == "New BSD":
+            license_url = "https://opensource.org/licenses/BSD-3-Clause"
+        elif option == "ISC":
+            license_url = "https://opensource.org/licenses/ISC"
+        elif option == "LGPL v3":
+            license_url = "https://choosealicense.com/licenses/lgpl-3.0/"
+
+    except ValueError as e:
+        return Exception(f"Failed to get License URL. Failure was {ValueError}")
+
+    return option, license_url
+
 
 
 
@@ -149,6 +206,8 @@ def main():
     (pauthor, aauthor, credits) = getAuthors()
     (userName, userEmail, userWebste) = getContactInfo()
     maintainer = getMaintainer()
+    copy = getCopyright()
+    (licenseType, licenseURL) = getLicense()
 
 ##############
 # MAIN LOGIC #
