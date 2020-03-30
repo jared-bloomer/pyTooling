@@ -15,6 +15,8 @@ __email__ = "jared@tuxknolwedge.com"
 __website__ = "http://www.jaredbloomer.com"
 __status__ = "Production"
 __deprecated__ = "False"
+__description__ = """ 
+"""
 
 """
 This script should be able to generate the following data
@@ -33,6 +35,8 @@ __email__ = "someone@someplace.org"
 __website__ = "http://www.mywebsite.com"
 __status__ = "Production/Development"
 __deprecated__ = "True/False"
+__description__ = """
+"""
 """
 
 
@@ -254,6 +258,7 @@ def main():
     print('__website__ = "%s"' % userWebsite )
     print('__status__ = "%s"' % status )
     print('__deprecated__ = "%s"' % deprecated )
+    print('__description__ = """ """')
 
 ##############
 # MAIN LOGIC #
