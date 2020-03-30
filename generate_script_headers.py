@@ -26,10 +26,7 @@ TODO:
     Get Copyright Info
     Get License Type
     Get License URL
-    Get Contact Info
-        Contact
-        Email
-        Website
+    Get Maintainer
     Get Status of project
         Production or Development
         Deprecated? 
@@ -38,6 +35,9 @@ TODO:
 """
 
 def getTodaysDate():
+    """
+    Get Todays Date
+    """
     from datetime import date
     try:
         today=date.today()
@@ -46,6 +46,12 @@ def getTodaysDate():
         return Exception(f"Failed to get todays date. Failure was {e}")
 
 def getAuthors():
+    """
+    Get Author Information
+        Primary Author
+        Additional Authors
+        Additional Credits
+    """
     Errors = ""
     try:
         pauthor = input("Who is the primary author of this script? (Required) ")
@@ -109,10 +115,25 @@ def getContactInfo():
 
     return (userName, userEmail, userWebsite)
 
+def getMaintainer():
+    """"
+    Get code Maintainer
+    """
+    try:
+        maintainer = input("Who is the active Maintainer of this code? ")
+        if not maintainer:
+            raise ValueError("Maintainer is required!")
+    except ValueError as e:
+        return Exception(f"Failed to get Maintainer. Failure was {e}")
+    return maintainer
+
+
+
 def main():
     date = getTodaysDate()
     (pauthor, aauthor, credits) = getAuthors()
     (userName, userEmail, userWebste) = getContactInfo()
+    maintainer = getMaintainer()
 
 ##############
 # MAIN LOGIC #
