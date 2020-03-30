@@ -26,7 +26,6 @@ TODO:
     Get Copyright Info
     Get License Type
     Get License URL
-    Get Maintainer
     Get Status of project
         Production or Development
         Deprecated? 
@@ -126,6 +125,22 @@ def getMaintainer():
     except ValueError as e:
         return Exception(f"Failed to get Maintainer. Failure was {e}")
     return maintainer
+
+def getCopyright():
+    """
+    Generate Copyright Info
+    """
+    from datetime import date
+    year = str(date.today()).split("-")[0]
+
+    try:
+        org = input("What is the name of your company or organization? ")
+        if not org:
+            raise ValueError("Company or organization is required!")
+    except ValueError as e:
+        return Exception(f"Failed to get company or organization. Failure was {e}")
+    return "copyright %s, %s. All rights reserved" % (year, org)
+
 
 
 
