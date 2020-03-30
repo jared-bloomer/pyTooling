@@ -22,9 +22,7 @@ __deprecated__ = "True/False"
 
 """
 TODO:
-    
-    Get License Type
-    Get License URL
+
     Get Status of project
         Production or Development
         Deprecated? 
@@ -198,8 +196,29 @@ def getLicense():
 
     return option, license_url
 
+def getStatus():
+    """
+    Get Status of project
+        Production or Development
+        Deprecated?
+    Get Version Number
+    """
+    try:
+        from pick import pick
+        title = "What is the status of this Project? "
+        statusoptions = ['Production', 'Development']
+        status, index = pick(statusoptions, title)
+    except Exception as e:
+        return Exception(f"There was an Error. Failure was {e}")
 
+    try:
+        version = input("what is the version of this code? ")
+        if not version:
+            raise ValueError("Maintainer is required!")
+    except ValueError as e:
+        return Exception(f"Failed to get Maintainer. Failure was {e}")
 
+    return status, version
 
 def main():
     date = getTodaysDate()
@@ -208,6 +227,7 @@ def main():
     maintainer = getMaintainer()
     copy = getCopyright()
     (licenseType, licenseURL) = getLicense()
+    (status, version) = getStatus()
 
 ##############
 # MAIN LOGIC #
