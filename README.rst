@@ -1,6 +1,11 @@
+.. image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
+   :target: https://opensource.org/licenses/BSD-3-Clause
+   :alt: New BSD 3-Clause
+
 .. image:: https://www.codefactor.io/repository/github/jared-bloomer/pytooling/badge
    :target: https://www.codefactor.io/repository/github/jared-bloomer/pytooling
    :alt: CodeFactor
+
 
 =========
 pyTooling
