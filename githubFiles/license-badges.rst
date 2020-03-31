@@ -22,10 +22,19 @@ Apache 2.0 License
    :target: https://opensource.org/licenses/Apache-2.0
    :alt: Apache License 2.0
 
-reStructured Text Formatting:
-    .. image:: https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg
-       :target: https://opensource.org/licenses/Apache-2.0
-       :alt: Apache License 2.0
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+   .. image:: https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg
+      :target: https://opensource.org/licenses/Apache-2.0
+      :alt: Apache License 2.0
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ---
 BSD
@@ -36,12 +45,39 @@ BSD 3-Clause License
    :target: https://opensource.org/licenses/BSD-3-Clause
    :alt: New BSD 3-Clause
 
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
+       :target: https://opensource.org/licenses/BSD-3-Clause
+       :alt: New BSD 3-Clause
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 BSD 2-Clause License
 
 .. image:: https://img.shields.io/badge/License-BSD%202--Clause-orange.svg
    :target: https://opensource.org/licenses/BSD-2-Clause
    :alt: New BSD 2-Clause
+
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://img.shields.io/badge/License-BSD%202--Clause-orange.svg
+       :target: https://opensource.org/licenses/BSD-2-Clause
+       :alt: New BSD 2-Clause
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 
 ----------------
 Creative Commons
@@ -54,11 +90,39 @@ CC 0
    :target: http://creativecommons.org/publicdomain/zero/1.0/
    :alt: Creative Commons 1.0
 
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://licensebuttons.net/l/zero/1.0/80x15.png
+       :target: http://creativecommons.org/publicdomain/zero/1.0/
+       :alt: Creative Commons 1.0
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+
 CC 1.0
 
 .. image:: https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg
    :target: http://creativecommons.org/publicdomain/zero/1.0/
    :alt: Creative Commons 1.0
+
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg
+       :target: http://creativecommons.org/publicdomain/zero/1.0/
+       :alt: Creative Commons 1.0
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
 -----------------------------
 Attribution 4.0 International
@@ -67,9 +131,37 @@ Attribution 4.0 International
    :target: https://creativecommons.org/licenses/by/4.0/
    :alt: Attribution 4.0
 
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://licensebuttons.net/l/by/4.0/80x15.png
+       :target: https://creativecommons.org/licenses/by/4.0/
+       :alt: Attribution 4.0
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
+
 .. image:: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
    :target: https://creativecommons.org/licenses/by/4.0/
    :alt: Attribution 4.0
+
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+       :target: https://creativecommons.org/licenses/by/4.0/
+       :alt: Attribution 4.0
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ----------------------------------------
 Attribution-ShareAlike 4.0 International
@@ -77,8 +169,34 @@ Attribution-ShareAlike 4.0 International
 .. image:: https://licensebuttons.net/l/by-sa/4.0/80x15.png
    :target: https://creativecommons.org/licenses/by-sa/4.0/
 
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://licensebuttons.net/l/by-sa/4.0/80x15.png
+       :target: https://creativecommons.org/licenses/by-sa/4.0/
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+
 .. image:: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
    :target: https://creativecommons.org/licenses/by-sa/4.0/
+
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+       :target: https://creativecommons.org/licenses/by-sa/4.0/
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 -------------------------------------------
 Attribution-NonCommercial 4.0 International
@@ -86,8 +204,34 @@ Attribution-NonCommercial 4.0 International
 .. image:: https://licensebuttons.net/l/by-nc/4.0/80x15.png
    :target: https://creativecommons.org/licenses/by-nc/4.0/
 
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://licensebuttons.net/l/by-nc/4.0/80x15.png
+       :target: https://creativecommons.org/licenses/by-nc/4.0/
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)
+
 .. image:: https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg
    :target: https://creativecommons.org/licenses/by-nc/4.0/
+
+reStructured Text Formatting (.rst files)
+
+.. code-block::
+
+    .. image:: https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg
+       :target: https://creativecommons.org/licenses/by-nc/4.0/
+
+MarkDown Text Formatting (.md files)
+
+.. code-block::
+
+    [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 -----------------------------------------
 Attribution-NoDerivates 4.0 International
