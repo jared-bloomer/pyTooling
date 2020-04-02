@@ -1,6 +1,6 @@
-.. image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
-   :target: https://opensource.org/licenses/BSD-3-Clause
-   :alt: New BSD 3-Clause
+.. image:: https://img.shields.io/badge/License-GPLv3-blue.svg
+   :target: https://www.gnu.org/licenses/gpl-3.0
+   :alt: GNU Public License v3
 
 .. image:: https://www.codefactor.io/repository/github/jared-bloomer/pytooling/badge
    :target: https://www.codefactor.io/repository/github/jared-bloomer/pytooling
