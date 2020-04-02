@@ -24,13 +24,17 @@ These scripts are designed to help automate and aid in the development of proper
 ******************
 How do I use this?
 ******************
-The best thing is to find a script that meets your needs and just run it. Each script is a stand alone tool that does not require any other script to be executed. Many of the scripts are small and focus on 1 specific thing. For example, you are starting with a blank slater script. Allyou have in your ``.py`` file is ::
+The best thing is to find a script that meets your needs and just run it. Each script is a stand alone tool that does not require any other script to be executed. Many of the scripts are small and focus on 1 specific thing. For example, you are starting with a blank slater script. All you have in your ``.py`` file is
+
+.. code-block:: python
 
      #!/usr/bin/env python3
      # -*- coding: utf-8 -*-
 
 Next you want to generate script metadata to add before you begin your actual code development. Well there is a script for that in this repo. just run ``generate_script_headers.py`` and
-it will run you through a series of prompts and provide you the correct metadata headers to add to your codes so you end up with something like this ::
+it will run you through a series of prompts and provide you the correct metadata headers to add to your codes so you end up with something like this
+
+.. code-block:: python
 
   #!/usr/bin/env python3
   # -*- coding: utf-8 -*-
