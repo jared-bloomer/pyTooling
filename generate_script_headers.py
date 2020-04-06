@@ -158,6 +158,11 @@ def getLicense():
     """
     try:
         from pick import pick
+    except ImportError:
+        print("ERROR: Please ensure that the package 'pick' is installed. You can install it by running 'pip3 install pick'")
+
+    try:
+        from pick import pick
         title = "Please choose which License you are using: "
         options = ['GPL v2', 'GPL v3', 'MIT', 'AGPL v3', 'Mozillia Public License 2.0', 'Apache License 2.0', 'Boost Software License 1.0', 'The Unlicense', 'New BSD', 'ISC', 'LGPL v3', 'Other']
         option, index = pick(options, title)
