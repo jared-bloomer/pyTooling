@@ -11,7 +11,7 @@ __license__ = "New BSD"
 __license_url__ = "https://opensource.org/licenses/BSD-3-Clause"
 __version__ = "0.0.1"
 __maintainer__ = "Jared Bloomer"
-__email__ = "jared@tuxknolwedge.com"
+__email__ = "jared@tuxknowledge.com"
 __website__ = "http://www.jaredbloomer.com"
 __status__ = "Production"
 __deprecated__ = "False"
@@ -156,6 +156,11 @@ def getLicense():
     LGPL v3
     Other
     """
+    try:
+        from pick import pick
+    except ImportError:
+        print("ERROR: Please ensure that the package 'pick' is installed. You can install it by running 'pip3 install pick'")
+
     try:
         from pick import pick
         title = "Please choose which License you are using: "

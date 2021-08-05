@@ -1,6 +1,11 @@
+.. image:: https://img.shields.io/badge/License-GPLv3-blue.svg
+   :target: https://www.gnu.org/licenses/gpl-3.0
+   :alt: GNU Public License v3
+
 .. image:: https://www.codefactor.io/repository/github/jared-bloomer/pytooling/badge
    :target: https://www.codefactor.io/repository/github/jared-bloomer/pytooling
    :alt: CodeFactor
+
 
 =========
 pyTooling
@@ -19,13 +24,17 @@ These scripts are designed to help automate and aid in the development of proper
 ******************
 How do I use this?
 ******************
-The best thing is to find a script that meets your needs and just run it. Each script is a stand alone tool that does not require any other script to be executed. Many of the scripts are small and focus on 1 specific thing. For example, you are starting with a blank slater script. Allyou have in your ``.py`` file is ::
+The best thing is to find a script that meets your needs and just run it. Each script is a stand alone tool that does not require any other script to be executed. Many of the scripts are small and focus on 1 specific thing. For example, you are starting with a blank slater script. All you have in your ``.py`` file is
+
+.. code-block:: python
 
      #!/usr/bin/env python3
      # -*- coding: utf-8 -*-
 
 Next you want to generate script metadata to add before you begin your actual code development. Well there is a script for that in this repo. just run ``generate_script_headers.py`` and
-it will run you through a series of prompts and provide you the correct metadata headers to add to your codes so you end up with something like this ::
+it will run you through a series of prompts and provide you the correct metadata headers to add to your codes so you end up with something like this
+
+.. code-block:: python
 
   #!/usr/bin/env python3
   # -*- coding: utf-8 -*-
@@ -40,7 +49,7 @@ it will run you through a series of prompts and provide you the correct metadata
   __license_url__ = "https://opensource.org/licenses/BSD-3-Clause"
   __version__ = "0.0.1"
   __maintainer__ = "Jared Bloomer"
-  __email__ = "jared@tuxknolwedge.com"
+  __email__ = "jared@tuxknowledge.com"
   __website__ = "http://www.jaredbloomer.com"
   __status__ = "Production"
   __deprecated__ = "False"
